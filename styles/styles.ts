@@ -7,15 +7,83 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  text: {
-    color: "white",
+  homeform: {
+    display: "flex",
+    gap: 20,
+  },
+  homebutton: {
     backgroundColor: "grey",
     padding: 20,
   },
-  second: {
-    margin: 20,
+  homeinput: {
+    color: "#686868",
+    height: 40,
+    width: 250,
+    borderBottomWidth: 2,
+    borderBottomColor: "#BEAD8E",
+    marginBottom: 42,
+    padding: 10,
   },
-  bar: {
-    backgroundColor: "blue",
+  homebtn: {
+    backgroundColor: "#BEAD8E",
+    paddingHorizontal: 81,
+    paddingVertical: 23,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  homebtndisabled: {
+    backgroundColor: "#dbdfe0",
+    paddingHorizontal: 81, 
+    paddingVertical: 23,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    opacity: 0.5
+  },
+  homebtntext: {
+    fontSize: 14,
+    fontWeight: "700",
+    textTransform: "uppercase",
+    letterSpacing: 2.8,
+    color: "#FFF"
+  },
+  homeheading: {
+    color: "#FFF",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  logoWrapper: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 7,
+  },
+  logoLetterWrapper: {
+    backgroundColor: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+  },
+  logoLetter: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  logoUpperText: {
+    textTransform: "uppercase",
+    fontSize: 12,
+    fontWeight: "700",
+  },
+  logoBelowText: {
+    textTransform: "uppercase",
+    fontSize: 12,
+    fontWeight: "400",
+  },
+  linkText: {
+    color: "#FFF",
+    fontSize: 14,
+    fontWeight: "600",
+    textTransform: "uppercase",
   },
 });
