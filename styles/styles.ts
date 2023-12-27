@@ -34,19 +34,19 @@ export const styles = StyleSheet.create({
   },
   homebtndisabled: {
     backgroundColor: "#dbdfe0",
-    paddingHorizontal: 81, 
+    paddingHorizontal: 81,
     paddingVertical: 23,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    opacity: 0.5
+    opacity: 0.5,
   },
   homebtntext: {
     fontSize: 14,
     fontWeight: "700",
     textTransform: "uppercase",
     letterSpacing: 2.8,
-    color: "#FFF"
+    color: "#FFF",
   },
   homeheading: {
     color: "#FFF",
@@ -86,4 +86,29 @@ export const styles = StyleSheet.create({
     fontWeight: "600",
     textTransform: "uppercase",
   },
+  infoheader: {
+    fontSize: 20,
+    fontWeight: "700",
+    letterSpacing: 1.8,
+    textTransform: "uppercase",
+    color: "#FFF",
+    marginBottom: 54,
+  },
+  infotable: {
+    display:"flex",
+    flexDirection:"column",
+    justifyContent: "center"
+  },
+  infocell: {
+    fontSize: 14,
+    fontWeight: "500",
+    letterSpacing: 1.8,
+    textTransform: "uppercase",
+    borderWidth: 2,
+    borderColor: "#FFF",
+    paddingVertical: 20,
+    textAlign: "center",
+    padding:15,
+    color:"#FFF"
+  }
 });
