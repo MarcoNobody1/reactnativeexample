@@ -93,6 +93,7 @@ export const styles = StyleSheet.create({
     textTransform: "uppercase",
     color: "#FFF",
     marginBottom: 54,
+    textAlign: "center"
   },
   infotable: {
     display:"flex",
@@ -110,5 +111,26 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     padding:15,
     color:"#FFF"
+  },
+  tableheading:{
+    fontSize: 14,
+    fontWeight: "bold",
+    letterSpacing: 1.8,
+    textTransform: "uppercase",
+    borderWidth: 2,
+    borderColor: "#FFF",
+    paddingVertical: 20,
+    textAlign: "center",
+    padding:15,
+    backgroundColor:"#FFF"
+  },
+  checkinbtn: {
+    backgroundColor: "#BEAD8E",
+    paddingHorizontal: 81,
+    paddingVertical: 23,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 32
   }
 });
