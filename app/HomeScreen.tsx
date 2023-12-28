@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { HomeProps } from "../interfaces/NavigationInterfaces";
 import { styles } from "../styles/styles";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 export const HomeScreen: FC<HomeProps> = ({ navigation }) => {
   const [bookingNumb, setBookingNumb] = useState<string>("");
@@ -25,13 +25,18 @@ export const HomeScreen: FC<HomeProps> = ({ navigation }) => {
           placeholderTextColor={"#686868"}
           returnKeyLabel="Booking"
           onChangeText={setBookingNumb}
+          value={bookingNumb}
+          accessibilityLabel="Booking Number Input"
         />
         <Pressable
-          style={bookingNumb.length !== 4 ? styles.homebtndisabled : styles.homebtn}
-          disabled={bookingNumb.length !== 4 ? true : false}
-          onPress={() =>
-            navigation.navigate("CheckIn", { booking: bookingNumb })
+          style={
+            bookingNumb.length !== 4 ? styles.homebtndisabled : styles.homebtn
           }
+          disabled={bookingNumb.length !== 4 ? true : false}
+          onPress={() => {
+            navigation.navigate("CheckIn", { booking: bookingNumb });
+            setBookingNumb("");
+          }}
         >
           <Text style={styles.homebtntext}>Check In</Text>
         </Pressable>
