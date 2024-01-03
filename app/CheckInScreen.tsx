@@ -28,6 +28,7 @@ export const CheckInScreen: FC<CheckInProps> = ({ navigation, route }) => {
       </View>
       <Pressable
         style={styles.checkinbtn}
+        hitSlop={100}
         delayLongPress={2000}
         onPressIn={() => {
           setIsPressing(true);
@@ -52,7 +53,7 @@ export const CheckInScreen: FC<CheckInProps> = ({ navigation, route }) => {
           );
         }}
       >
-        <Text style={styles.homebtntext}>Done</Text>
+        <Text style={styles.homebtntext}>{isChecked && !isPressing ? "Done" : isPressing ?  "Checking..." : "Press to check in"}</Text>
       </Pressable>
     </SafeAreaView>
   );
