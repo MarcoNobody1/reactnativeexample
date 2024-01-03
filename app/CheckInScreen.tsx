@@ -20,6 +20,7 @@ export const CheckInScreen: FC<CheckInProps> = ({ navigation, route }) => {
         <Text style={styles.tableheading}>
           Booking nº {route.params.booking} details
         </Text>
+        <Text style={styles.infocell}>Name: </Text>
         <Text style={styles.infocell}>checkin date:</Text>
         <Text style={styles.infocell}>checkout date:</Text>
         <Text style={styles.infocell}>number of guests: </Text>
