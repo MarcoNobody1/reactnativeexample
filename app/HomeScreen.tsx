@@ -1,5 +1,4 @@
 import {
-  Button,
   Pressable,
   SafeAreaView,
   Text,
@@ -8,7 +7,7 @@ import {
 } from "react-native";
 import { HomeProps } from "../interfaces/NavigationInterfaces";
 import { styles } from "../styles/styles";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 
 export const HomeScreen: FC<HomeProps> = ({ navigation }) => {
   const [bookingNumb, setBookingNumb] = useState<string>("");
