@@ -8,6 +8,7 @@ export type RootStackParamList = {
   CheckIn: { booking: string };
   Info: undefined;
   Logo: undefined;
+  Login: undefined;
 };
 
 export type HomeProps = {
@@ -25,4 +26,8 @@ export type InfoProps = {
 
 export type LogoProps = {
   navigation: NativeStackNavigationProp<RootStackParamList, "Logo">;
+};
+
+export type LoginProps = {
+  navigation: NativeStackNavigationProp<RootStackParamList, "Login">;
 };
