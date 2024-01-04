@@ -3,7 +3,7 @@ import { loginSlice } from "../features/Login/LoginSlice";
 
 export const store = configureStore({
   reducer: {
-    bookings: loginSlice.reducer,
+    login: loginSlice.reducer,
   },
 });
 
