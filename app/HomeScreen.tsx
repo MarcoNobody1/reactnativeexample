@@ -8,52 +8,17 @@ import {
 import { HomeProps } from "../interfaces/NavigationInterfaces";
 import { styles } from "../styles/styles";
 import React, { FC, useState } from "react";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { loginUsername } from "../features/Login/loginSlice";
 
 export const HomeScreen: FC<HomeProps> = ({ navigation }) => {
   const [bookingNumb, setBookingNumb] = useState<string>("");
-  let token: string;
-  const searchBooking = async (refnumb: string) => {
-    try {
-      const response = await fetch(
-        `https://7zclei7sla.execute-api.eu-west-1.amazonaws.com/login`,
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username: "Marco",
-            password: "admin1234",
-          }),
-        }
-      );
-      if (!response.ok) throw new Error(`Status: ${response.status}`);
-      const data = await response.json();
-      token = data.token;
-    } catch (error) {}
-
-    try {
-      const response = await fetch(
-        `https://7zclei7sla.execute-api.eu-west-1.amazonaws.com/bookings/search/${refnumb}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            token: token,
-          },
-        }
-      );
-      const json = await response.json();
-      console.log(json);
-      return json.movies;
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const username = useAppSelector(loginUsername);
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.homeform}>
+        <Text>Hello {username ? username : "John Doe"}</Text>
         <Text style={styles.homeheading}>Booking Reference Number:</Text>
         <TextInput
           style={styles.homeinput}
@@ -73,7 +38,6 @@ export const HomeScreen: FC<HomeProps> = ({ navigation }) => {
           onPress={() => {
             navigation.navigate("CheckIn", { booking: bookingNumb });
             setBookingNumb("");
-            searchBooking(bookingNumb);
           }}
         >
           <Text style={styles.homebtntext}>Check In</Text>
