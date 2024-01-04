@@ -28,7 +28,6 @@ export const loginSlice = createSlice({
         state.loginInfo.username = action.payload.username;
         state.loginInfo.email = action.payload.payload.email;
         state.loginInfo.photo = action.payload.payload.avatar;
-        
       })
       .addCase(userLogin.pending, (state) => {
         state.status = "pending";
