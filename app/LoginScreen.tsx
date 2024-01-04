@@ -2,7 +2,7 @@ import { Alert, Pressable, SafeAreaView, Text, TextInput, View } from "react-nat
 import { LoginProps } from "../interfaces/NavigationInterfaces";
 import { styles } from "../styles/styles";
 import React, { FC, useState } from "react";
-import { LoginDataInterface } from "../interfaces/GeneralInterfaces";
+import { LoginDataInterface } from "../interfaces/LoginDataInterface";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const LoginScreen: FC<LoginProps> = ({ navigation }) => {
